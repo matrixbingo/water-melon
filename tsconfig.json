@@ -3,10 +3,12 @@
     "outDir": "build/dist",
     "module": "esnext",
     "target": "esnext",
-    "lib": ["esnext", "dom"],
+    "lib": ["es6", "esnext", "dom"],
     "sourceMap": true,
+    "allowJs": true,
     "baseUrl": ".",
     "jsx": "react-jsx",
+    "rootDir": ".",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
@@ -14,10 +16,16 @@
     "noImplicitReturns": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-    "allowJs": true,
+
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "strict": true,
+
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "noEmit": true,
+
     "paths": {
       "@/*": ["./src/*"],
       "@@/*": ["./src/.umi/*"]
@@ -26,13 +34,13 @@
   "include": [
     "mock/**/*",
     "src/**/*",
-    "playwright.config.ts",
     "tests/**/*",
     "test/**/*",
     "__test__/**/*",
     "typings/**/*",
     "config/**/*",
     ".eslintrc.js",
+    ".stylelintrc.js",
     ".prettierrc.js",
     "jest.config.js",
     "mock/*"

@@ -116,7 +116,11 @@ export default defineConfig({
       projectName: 'swagger',
     },
   ],
+  // 多tabs布局，只需要配置下面两项即可
+  keepalive: [/./],
+  tabsLayout: {},
   mfsu: {
     exclude: ['@playwright/test'],
+    mfName: 'watermelon' // mfName:string。指定预编译依赖的变量名，默认为mf
   },
 });
